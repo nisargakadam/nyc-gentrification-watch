@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background: #060d1a;
+}
+
+/* Override Leaflet default tooltip */
+.leaflet-tooltip {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+}
+
+/* Hide Leaflet attribution (keep if you want to be polite) */
+.leaflet-control-attribution {
+  font-size: 9px;
+  opacity: 0.5;
+}

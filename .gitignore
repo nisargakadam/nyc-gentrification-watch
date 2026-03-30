@@ -1,0 +1,8 @@
+data/raw/
+data/processed/
+model/checkpoints/
+__pycache__/
+*.pyc
+.env
+node_modules/
+.next/
