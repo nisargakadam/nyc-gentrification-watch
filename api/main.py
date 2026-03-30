@@ -17,9 +17,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from typing import List, Optional
 
-import sys
-sys.path.append(str(Path(__file__).parent.parent / "model"))
-from lstm_model import GentrificationLSTM
+
 
 # ── Config ───────────────────────────────────────────────────────────────────
 MODEL_DIR = Path(__file__).parent.parent / "model" / "checkpoints"
@@ -27,9 +25,7 @@ DEVICE    = torch.device("cpu")
 
 # ── Load model ───────────────────────────────────────────────────────────────
 def load_model():
-    meta_path = MODEL_DIR / "model_meta.json"
-    if not meta_path.exists():
-        return None, None
+    return None, None
 
     with open(meta_path) as f:
         meta = json.load(f)
